@@ -1,0 +1,14 @@
+lemmatization demo: 
+cook: cook
+cooks: cook
+cooking: cook
+cooked: cook
+
+word vector: Vector Distances
+cook / cooks: 0.7583806383367769
+cooked / cooking: 0.6104049753659725
+cook / manslaughter: 0.1285078119440038
+
+entrepreneur / entrepreneurial: 0.5758986569275839
+entrepreneurial / entrepreneurship: 0.7796091847018665
+entrepreneur / salt: 0.04500890597430421
