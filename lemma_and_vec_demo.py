@@ -8,6 +8,7 @@ as well a small demo comparing the similarities between words using word vectors
 
 from nltk import word_tokenize, pos_tag, WordNetLemmatizer, download
 from nltk.corpus import wordnet, stopwords
+import time
 
 lemmatizer = WordNetLemmatizer() 
 
@@ -46,7 +47,11 @@ model = KeyedVectors.load_word2vec_format('./GoogleNews-vectors-negative300.bin'
 print()
 
 def print_vec_distance(w1, w2):
-    print(f"{w1} / {w2}: {str(model.similarity(w1, w2))}")\
+    t0 = time.time()
+    sim = model.similarity(w1, w2)
+    print(f"{w1} / {w2}: {str(sim)}")
+    print("comparison time: " + str( time.time() - t0))
+    print()
 
 
 
